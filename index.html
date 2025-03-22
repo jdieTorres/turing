@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test de Turing</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+        main {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        #n8n-chat {
+            width: 400px;
+            height: 600px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: white;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Bienvenido a el chat Test de Turing</h1>
+        <p>Inicia una conversación a continuación.</p>
+    </main>
+    <div id="n8n-chat"></div>
+    
+    <script>
+        createChat({
+            webhookUrl: 'https://turingtest70.app.n8n.cloud/workflow/fbyHndVyicgWJ8ol',
+            webhookConfig: {
+                method: 'POST',
+                headers: {}
+            },
+            target: '#n8n-chat',
+            mode: 'window',
+            chatInputKey: 'chatInput',
+            chatSessionKey: 'sessionId',
+            metadata: {},
+            showWelcomeScreen: false,
+            defaultLanguage: 'es',
+            initialMessages: [
+                'Hola escribe un mensaje para comenzar el test! 👋'
+            ],
+            i18n: {
+                es: {
+                    title: 'Hola inicia el test! 👋',
+                    subtitle: "Comprueba si hablas con un humano o una máquina!",
+                    footer: '',
+                    getStarted: 'Test de Turing',
+                    inputPlaceholder: 'Conversa ...',
+                },
+            },
+        });
+    </script>
+</body>
+</html>
