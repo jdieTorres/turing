@@ -32,7 +32,7 @@
     	import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
     
     	createChat({
-            webhookUrl: 'https://turingtest70.app.n8n.cloud/workflow/fbyHndVyicgWJ8ol',
+            webhookUrl: 'https://turingtest70.app.n8n.cloud/webhook/429d8899-2fbb-4601-9885-6196b2c9fa1b/chat',
             webhookConfig: {
             method: 'POST',
             headers: {}
@@ -45,16 +45,16 @@
         	showWelcomeScreen: false,
         	defaultLanguage: 'en',
         	initialMessages: [
-        		'Hi there! 👋',
-        		'My name is Nathan. How can I assist you today?'
+        		'Hola! 👋',
+        		'¿Podrías descubrir si hablar con un humano o una máquina?'
         	],
         	i18n: {
         		en: {
-        			title: 'Hi there! 👋',
-        			subtitle: "Start a chat. We're here to help you 24/7.",
+        			title: 'Bienvenido! 👋',
+        			subtitle: "Inicia una conversación para comenzar el test",
         			footer: '',
-        			getStarted: 'New Conversation',
-        			inputPlaceholder: 'Type your question..',
+        			getStarted: 'Nuevo Chat',
+        			inputPlaceholder: 'Conversa ...',
         		},
         	},
         });
