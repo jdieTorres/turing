@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
     <title>Test de Turing</title>
     <style>
         body {
@@ -27,33 +28,35 @@
         <p>Inicia una conversación a continuación.</p>
     </main>
     
-    <script>
-        createChat({
-            webhookUrl: 'https://turingtest70.app.n8n.cloud/workflow/fbyHndVyicgWJ8ol',
-            webhookConfig: {
-                method: 'POST',
-                headers: {}
-            },
-            target: '#n8n-chat',
-            mode: 'window',
-            chatInputKey: 'chatInput',
-            chatSessionKey: 'sessionId',
-            metadata: {},
-            showWelcomeScreen: false,
-            defaultLanguage: 'es',
-            initialMessages: [
-                'Hola escribe un mensaje para comenzar el test! 👋'
-            ],
-            i18n: {
-                es: {
-                    title: 'Hola inicia el test! 👋',
-                    subtitle: "Comprueba si hablas con un humano o una máquina!",
-                    footer: '',
-                    getStarted: 'Test de Turing',
-                    inputPlaceholder: 'Conversa ...',
+    <script type="module">
+    	import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+    
+    	createChat({
+                webhookUrl: 'https://turingtest70.app.n8n.cloud/workflow/fbyHndVyicgWJ8ol',
+                webhookConfig: {
+                    method: 'POST',
+                    headers: {}
                 },
-            },
-        });
+                target: '#n8n-chat',
+                mode: 'window',
+                chatInputKey: 'chatInput',
+                chatSessionKey: 'sessionId',
+                metadata: {},
+                showWelcomeScreen: false,
+                defaultLanguage: 'es',
+                initialMessages: [
+                    'Hola escribe un mensaje para comenzar el test! 👋'
+                ],
+                i18n: {
+                    es: {
+                        title: 'Hola inicia el test! 👋',
+                        subtitle: "Comprueba si hablas con un humano o una máquina!",
+                        footer: '',
+                        getStarted: 'Test de Turing',
+                        inputPlaceholder: 'Conversa ...',
+                    },
+                },
+            });
     </script>
 </body>
 </html>
